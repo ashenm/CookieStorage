@@ -1,0 +1,36 @@
+dist:
+  xenial
+
+language:
+  node_js
+
+node_js:
+  lts/*
+
+install:
+  make install
+
+before_script:
+  make lint
+
+script:
+  make build
+
+before_cache:
+  make assess
+
+after_success:
+  make digest
+
+before_deploy:
+  make index
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: build
+
+notifications:
+  slack:
+    secure: G4YfQgSgqgOkh+k+jAScYHDn9xWgxpJvyp8d7F2JIc4kiK2e6AcrM2uSJV5WdPEdWusFgaD7TiKO7fyi4g+cWtfjaQanY3qXdhPKiv3J/UyaDY8hnBSbz5P5jM2hcG+vQHCOmxoN52i3pGXnyiWf6ZoD+SUQrxFgktLt4K2iHkcC3c0xHkIJBsDsuzpgI5pPOoESWdI4WbIS5OBjabApXVgB2rZysF3HxWiiVI0DRP1j2KsNuX6Nesl8eyP2vu3UpjNMxMXwtTcPa69DkDXmItaGg2m8wR7uCisZNduw3OaMHOKdy88a/+4hE/RLVqEU29hA9jsLiKvptLYLzBgnPxdKz5gx33+heIavFK6/8qzwtw9tMLgy11UM+S1rOoVjDbkDJQNvvGPLF8xw++aj/k2x3FzyX0MmLHM9xFbmbaZTL0wGcILLX8cRdo9QQZqxbZI05KKiN/y5jAPCinzBkZWZy5UKAnBMf7E28JtHXw/ghdqyCUJAmN5fh9mlWbgZhV3hbmhr9qiwbL0iSUD+hWHI/k835IXxcKbyxN8pMNlPm3GAceFWcaD7ZYXTr5nTt8zidw7hbOARF8REB6y3zuSSWS0DAAy9ns/k2n3Y3IEi/JU/vPqlprlMN4xC1PAxlKwDabT4RfmmWdK6YJiMjj4Uel/Qg0RkjufH7bTfvm8=

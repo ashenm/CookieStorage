@@ -1,0 +1,18 @@
+{
+
+  "version": "1.0.0",
+  "name": "CookieStorage",
+  "description": "A minimalist pollyfill for Web Storage Store interface",
+
+  "author": "Ashen Gunaratne <mail@ashenm.ml>",
+  "homepage": "https://github.com/ashenm/CookieStorage",
+
+  "dependencies": {
+    "puppeteer": "1.x"
+  },
+
+  "devDependencies": {
+    "eslint": "5.x"
+  }
+
+}
