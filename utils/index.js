@@ -44,7 +44,7 @@ puppeteer.launch({ args: ['--no-sandbox'] }).then(async browser => {
           '<h1 style="margin-bottom: 0;">CookieStorage.js</h1>' +
           '<hr >' +
           '<img width="92" height="20" style="margin-right: .5rem;" src="https://img.shields.io/badge/version-latest-44cc11.svg" alt="build version" />' +
-          '<img width="90" height="20" src="https://travis-ci.org/ashenm/CookieStorage.svg?branch=master" alt="build status" />' +
+          '<img width="90" height="20" src="https://travis-ci.com/ashenm/CookieStorage.svg?branch=master" alt="build status" />' +
         '</header>' +
         '<main>' +
           '<pre>' +
